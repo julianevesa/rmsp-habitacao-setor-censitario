@@ -1,0 +1,15 @@
+# Dados do IBGE (muito grandes para o GitHub — ver README)
+data/
+*.zip
+*.gpkg
+setores_rmsp.csv
+
+# Arquivos gerados pelos notebooks
+*.png
+*.csv
+
+# Ambiente e checkpoints
+.ipynb_checkpoints/
+__pycache__/
+venv*/
+.venv/
