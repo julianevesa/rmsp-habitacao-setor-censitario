@@ -3,14 +3,15 @@
 Análise exploratória e agrupamento (K-Means) das condições de moradia dos domicílios nos setores censitários dos 39 municípios da Região Metropolitana de São Paulo (RMSP), a partir do Censo Demográfico 2022 (IBGE).
 
 ## Estrutura do projeto
+```
 .
-
 ├── data/                          # dados do IBGE (NÃO versionados — ver "Como obter os dados")
 ├── setores_rmsp_variaveis.csv     # base reduzida: variáveis usadas na análise, por setor
 ├── BD_setores_RMSP.ipynb          # 1. seleciona os setores da RMSP e consolida a base
 ├── AN_setores_RMSP.ipynb          # 2. preparação, análise descritiva, agrupamento e visualizações
 ├── .gitignore
 └── README.md
+```
 
 ### Base reduzida (para reproduzir apenas a análise)
 
