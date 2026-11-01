@@ -4,6 +4,7 @@ Análise exploratória e agrupamento (K-Means) das condições de moradia dos do
 
 ## Estrutura do projeto
 .
+
 ├── data/                          # dados do IBGE (NÃO versionados — ver "Como obter os dados")
 ├── setores_rmsp_variaveis.csv     # base reduzida: variáveis usadas na análise, por setor
 ├── BD_setores_RMSP.ipynb          # 1. seleciona os setores da RMSP e consolida a base
