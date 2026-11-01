@@ -3,15 +3,34 @@
 Análise exploratória e agrupamento (K-Means) das condições de moradia dos domicílios nos setores censitários dos 39 municípios da Região Metropolitana de São Paulo (RMSP), a partir do Censo Demográfico 2022 (IBGE).
 
 ## Estrutura do projeto
-
-```
 .
-├── data/                      # dados do IBGE (NÃO versionados — ver "Como obter os dados")
-├── BD_setores_RMSP.ipynb      # 1. seleciona os setores da RMSP e consolida a base
-├── AN_setores_RMSP.ipynb      # 2. preparação, análise descritiva, agrupamento e visualizações
+├── data/                          # dados do IBGE (NÃO versionados — ver "Como obter os dados")
+├── setores_rmsp_variaveis.csv     # base reduzida: variáveis usadas na análise, por setor
+├── BD_setores_RMSP.ipynb          # 1. seleciona os setores da RMSP e consolida a base
+├── AN_setores_RMSP.ipynb          # 2. preparação, análise descritiva, agrupamento e visualizações
 ├── .gitignore
 └── README.md
-```
+
+### Base reduzida (para reproduzir apenas a análise)
+
+O arquivo [`setores_rmsp_variaveis.csv`](setores_rmsp_variaveis.csv), disponível neste repositório, contém as variáveis utilizadas na análise para os 47.293 setores censitários da RMSP. Com ele, é possível rodar diretamente o notebook `AN_setores_RMSP.ipynb`, sem baixar os dados do IBGE.
+
+| Coluna | Descrição |
+|---|---|
+| `CD_SETOR` | Código do setor censitário |
+| `CD_MUN`, `NM_MUN` | Código e nome do município |
+| `V00001` | Domicílios particulares permanentes ocupados |
+| `v0007` | Total de domicílios particulares ocupados (permanentes e improvisados) |
+| `V00050` a `V00058` | Tipo de domicílio (cortiço, estrutura degradada e domicílios improvisados) |
+| `V00113` a `V00118`, `V00200`, `V00201`, `V00464` | Abastecimento de água |
+| `V00236`, `V00237`, `V00312` a `V00316` | Banheiro e esgotamento sanitário |
+| `V00399` a `V00402` | Destino do lixo |
+
+Os valores estão em número de domicílios, como publicados pelo IBGE. Os valores omitidos por sigilo aparecem vazios; seu tratamento é feito no notebook de análise. A descrição completa de cada variável está no dicionário de dados dos Agregados por Setores Censitários do IBGE e no próprio notebook de análise.
+
+### Base completa (para reconstruir a partir dos dados originais)
+
+Para reconstruir a base completa, com todas as variáveis, siga os passos abaixo.
 
 ## Como obter os dados
 
